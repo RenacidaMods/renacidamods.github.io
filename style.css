@@ -115,6 +115,17 @@ summary { cursor: pointer; font-weight: 700; }
 details[open] summary { margin-bottom: 0.4rem; }
 details p { margin: 0.4rem 0; }
 
+.compare { display: grid; gap: 1rem; margin: 1rem 0 0.5rem; }
+figure { margin: 0; }
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+figcaption { font-size: 0.95rem; color: var(--muted); margin-top: 0.4rem; }
+
 code { background: var(--bg-sunk); padding: 0.1rem 0.35rem; border-radius: 6px; font-size: 0.95em; }
 
 footer.site {
