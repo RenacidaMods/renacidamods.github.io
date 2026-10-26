@@ -13,6 +13,7 @@ All figures were measured by RenacidaMods on one PC: NVIDIA RTX 3090, AMD Ryzen 
 - Sprites (mana balls, creatures, trees) appear about 20% too wide in Magic Carpet 2 HD because the art was drawn for DOS 320 x 200 tall pixels; the RenacidaMods edition draws them at their intended shape.
 - At 16:9, Magic Carpet 2 HD's view is zoomed in by about 22% compared with 4:3, not stretched.
 - PC needs: the CPU matters most (the 3D world is drawn on the CPU); any Direct3D 11 graphics card should cope.
+- Every change and how it works: https://github.com/RenacidaMods/magic-carpet-2-hd/blob/renacida-mods/RenacidaMods-changes.md
 - Page: https://renacidamods.edparker.uk/magic-carpet-2/
 
 ## Fatal Racing / Whiplash (Gremlin Interactive, 1995)
