@@ -1,0 +1,28 @@
+# RenacidaMods
+
+> Free mods and fixes by Ed Parker that get classic PC games running well on modern hardware, using the player's own copy of each game. No game files are ever included. Not affiliated with EA, Bullfrog, Gremlin or other original developers or publishers.
+
+All figures were measured by RenacidaMods on one PC: NVIDIA RTX 3090, AMD Ryzen 9 5950X, 42" LG C3 at 3840 x 2160, 120 Hz, Windows. Dates are given with each fact.
+
+## Magic Carpet 2: The Netherworlds (Bullfrog, 1995)
+
+- Best way to play on a modern PC: Magic Carpet 2 HD (https://github.com/thobbsinteractive/magic-carpet-2-hd), a free open source rebuild for Windows, plus the game data from your own copy (for example GOG or the original CD).
+- RenacidaMods edition of Magic Carpet 2 HD 0.1 (released 26 October 2026, free, GPL v3): a 2.7 MB add-on for Magic Carpet 2 HD 0.9.16.0. Download: https://github.com/RenacidaMods/magic-carpet-2-hd/releases/tag/renacidamods-0.1
+- Measured 25 to 26 October 2026: stock Magic Carpet 2 HD 0.9.16.0 runs at 24 fps (game speed is tied to frame rate). With the RenacidaMods edition: 60 to 95 fps at 3840 x 2160 and 120 fps at 1920 x 1080, with the game at its normal speed (24 game steps a second plus in-between frames up to 120 fps).
+- Direct3D 11 shows a 4K frame in about 5.5 ms, against about 11 ms for SDL's default Direct3D 9 (roughly 48 fps going to 90 fps in the same scene).
+- Sprites (mana balls, creatures, trees) appear about 20% too wide in Magic Carpet 2 HD because the art was drawn for DOS 320 x 200 tall pixels; the RenacidaMods edition draws them at their intended shape.
+- At 16:9, Magic Carpet 2 HD's view is zoomed in by about 22% compared with 4:3, not stretched.
+- PC needs: the CPU matters most (the 3D world is drawn on the CPU); any Direct3D 11 graphics card should cope.
+- Page: https://renacidamods.edparker.uk/magic-carpet-2/
+
+## Fatal Racing / Whiplash (Gremlin Interactive, 1995)
+
+- Best way to play on a modern PC: ROLLER (https://github.com/FatalDecomp/ROLLER), a free open source rebuild by the FatalDecomp team, with a disc image of your own retail DOS copy. Windows, Linux, macOS, Android, and in a browser at https://fatal.racing/
+- Checked 26 October 2026 from ROLLER's source code (commit 095f1d9) and nightly v0.1.1-dev.20261024: any window size up to 4K (3D drawn at up to 1920 x 1200 and scaled), Hor+ widescreen and ultrawide via "(native)" render scale options, game speed correct at any frame rate (fixed 36 Hz race timer), Vsync or uncapped, MSAA up to 8x, anisotropic filtering up to 16x, CD music from CUE/BIN images, online and LAN multiplayer, split screen, gamepad and wheel support. Nightly pre-releases only.
+- RenacidaMods is working on improvements for ROLLER; nothing released yet.
+- Page: https://renacidamods.edparker.uk/fatal-racing/
+
+## Links
+
+- GitHub: https://github.com/RenacidaMods
+- Support (Ko-fi): https://ko-fi.com/renacidamods

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fatal Racing (Whiplash) on a modern PC: 4K, widescreen and high frame rates | RenacidaMods</title>
+<meta name="description" content="How to play Fatal Racing (Whiplash in North America) on a modern PC: the free ROLLER rebuild runs it at up to 4K, in Hor+ widescreen, at high frame rates with CD music, using your own copy of the game.">
+<link rel="canonical" href="https://renacidamods.edparker.uk/fatal-racing/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="RenacidaMods">
+<meta property="og:title" content="Fatal Racing (Whiplash) on a modern PC: 4K, widescreen and high frame rates">
+<meta property="og:description" content="The free ROLLER rebuild runs Fatal Racing at up to 4K, Hor+ widescreen and high frame rates, with CD music, from your own copy of the game.">
+<meta property="og:url" content="https://renacidamods.edparker.uk/fatal-racing/">
+<meta property="og:image" content="https://renacidamods.edparker.uk/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://renacidamods.edparker.uk/fatal-racing/#page",
+      "url": "https://renacidamods.edparker.uk/fatal-racing/",
+      "name": "Fatal Racing (Whiplash) on a modern PC: 4K, widescreen and high frame rates",
+      "inLanguage": "en-GB",
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-26",
+      "isPartOf": { "@id": "https://renacidamods.edparker.uk/#website" },
+      "author": { "@id": "https://renacidamods.edparker.uk/#ed" },
+      "about": {
+        "@type": "VideoGame",
+        "name": "Fatal Racing",
+        "alternateName": "Whiplash",
+        "datePublished": "1995",
+        "author": { "@type": "Organization", "name": "Gremlin Interactive" },
+        "gamePlatform": "PC"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What's the best way to play Fatal Racing on a modern PC?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Use ROLLER, a free open source rebuild of the Fatal Racing / Whiplash engine by the FatalDecomp team, with a disc image of your own retail DOS copy. It runs on Windows, Linux, macOS and Android, with up to 4K, Hor+ widescreen, high frame rates, MSAA and the original CD music." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Fatal Racing run at 4K and in widescreen?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, with ROLLER. Its window can be any size up to 4K. The 3D view is drawn at up to 3 times 640 x 400 (1920 x 1200) and scaled to the window. Render Scale options marked (native) give Hor+ widescreen, ultrawide included; the HUD is stretched sideways." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Fatal Racing run at high frame rates without speeding up?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, with ROLLER. The race runs on its own fixed 36 Hz timer, so game speed stays correct at any frame rate. Vsync is on by default and follows your monitor's refresh rate; with Vsync off it's uncapped. According to ROLLER's source code, motion between game steps isn't smoothed, so movement may still update 36 times a second." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does ROLLER play Fatal Racing's CD music?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, if you give it a CUE/BIN disc image, which includes the audio tracks. An ISO has no audio tracks, so ROLLER falls back to MIDI music." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I play Fatal Racing in a browser?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. ROLLER also runs in a web browser at fatal.racing, with the free Whiplash demo or a disc image of your own copy." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">Renacida<span>Mods</span></a>
+    <nav class="site" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/magic-carpet-2/">Magic Carpet 2</a>
+      <a href="/fatal-racing/" aria-current="page">Fatal Racing</a>
+      <a href="https://github.com/RenacidaMods">GitHub</a>
+      <a href="https://ko-fi.com/renacidamods">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="muted small">Gremlin Interactive, 1995 · Called Whiplash in North America · Updated 26 October 2026</p>
+    <h1>Fatal Racing on a modern PC: 4K, widescreen and high frame rates</h1>
+
+    <div class="answer">
+      <p><strong>Short answer:</strong> play it with <a href="https://github.com/FatalDecomp/ROLLER">ROLLER</a>, a free open source rebuild of the game by the FatalDecomp team, using a disc image of your own retail DOS copy.</p>
+      <p>It brings <strong>up to 4K</strong>, <strong>Hor+ widescreen</strong>, <strong>high frame rates at the correct game speed</strong>, anti-aliasing and the <strong>original CD music</strong>, on Windows, Linux, macOS and Android.</p>
+      <p><a class="button" href="https://github.com/FatalDecomp/ROLLER/releases">Get ROLLER on GitHub</a></p>
+    </div>
+
+    <h2>What ROLLER gives you</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Feature</th><th>Original DOS game</th><th>ROLLER</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Resolution</td><td>Low resolution, up to 640 x 480</td><td>Any window size up to 4K. The 3D view is drawn at up to 1920 x 1200 (render scale 3x) and scaled to fit.</td></tr>
+          <tr><td>Widescreen</td><td>Only through a cheat code</td><td>Hor+ with the "(native)" Render Scale options, ultrawide included. The HUD is stretched sideways.</td></tr>
+          <tr><td>Frame rate</td><td>Limited; 60 fps only in the 3dfx version</td><td>Follows your monitor's refresh rate with Vsync, or uncapped. Game speed stays correct.</td></tr>
+          <tr><td>Windowed</td><td>No</td><td>Windowed by default; Alt+Enter for borderless fullscreen.</td></tr>
+          <tr><td>Picture quality</td><td>No options</td><td>MSAA 2x, 4x or 8x, anisotropic filtering up to 16x, a CRT filter and a draw distance slider.</td></tr>
+          <tr><td>Music</td><td>CD audio</td><td>CD music from a CUE/BIN image, or MIDI with an ISO.</td></tr>
+          <tr><td>Multiplayer</td><td>Network play</td><td>Online and LAN, plus two-player split screen.</td></tr>
+          <tr><td>Controls</td><td>–</td><td>Keyboard, gamepad and steering wheel.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted small">Checked 26 October 2026 against ROLLER's source code (commit 095f1d9) and nightly v0.1.1-dev.20261024.</p>
+
+    <h2>How to set it up</h2>
+    <ol>
+      <li>Download the latest nightly for your system from <a href="https://github.com/FatalDecomp/ROLLER/releases">ROLLER's releases</a>. There's no stable release yet.</li>
+      <li>Make a disc image of your Fatal Racing or Whiplash CD. A <strong>CUE/BIN</strong> image keeps the CD music; an ISO doesn't.</li>
+      <li>Start ROLLER. On first launch it asks for the disc image and copies out the game data it needs.</li>
+      <li>Press the <strong>`</strong> key (above Tab) to open the settings overlay. For a 4K screen, a Render Scale option marked "(native)" gives widescreen, then pick an MSAA level.</li>
+    </ol>
+    <p>Already have the game installed? ROLLER can use an existing folder with <code>--whiplash-root</code>.</p>
+
+    <h2>Good to know</h2>
+    <ul>
+      <li>Only nightly pre-releases so far, so expect changes.</li>
+      <li>Most settings live in the debug overlay rather than the game's menus.</li>
+      <li>The HUD and menus stay at their original low resolution.</li>
+      <li>Keyboard steering ramps up gradually, as in the original.</li>
+    </ul>
+
+    <h2>Questions</h2>
+    <details>
+      <summary>What's the best way to play Fatal Racing on a modern PC?</summary>
+      <p>Use ROLLER with a disc image of your own retail DOS copy. It runs on Windows, Linux, macOS and Android, at up to 4K, with Hor+ widescreen, high frame rates and the original CD music.</p>
+    </details>
+    <details>
+      <summary>Does it run at high frame rates without speeding up?</summary>
+      <p>Yes. The race runs on its own fixed 36 Hz timer, so the game speed stays correct at any frame rate. According to ROLLER's source code, motion between game steps isn't smoothed, so movement may still update 36 times a second.</p>
+    </details>
+    <details>
+      <summary>Does it play the CD music?</summary>
+      <p>Yes, from a CUE/BIN disc image, which includes the audio tracks. An ISO has none, so ROLLER falls back to MIDI.</p>
+    </details>
+    <details>
+      <summary>Can I play it in a browser?</summary>
+      <p>Yes, at <a href="https://fatal.racing/">fatal.racing</a>, with the free Whiplash demo or a disc image of your own copy.</p>
+    </details>
+    <details>
+      <summary>Does it include the game?</summary>
+      <p>No. You need your own retail copy of Fatal Racing or Whiplash.</p>
+    </details>
+
+    <h2>What RenacidaMods is working on</h2>
+    <p>RenacidaMods is working on improvements to ROLLER for Fatal Racing. Nothing is released yet. Follow <a href="https://github.com/RenacidaMods">RenacidaMods on GitHub</a> to hear when it is.</p>
+
+    <h2>Credits</h2>
+    <p>All credit for ROLLER goes to <a href="https://github.com/FatalDecomp/ROLLER">the FatalDecomp team and contributors</a>. Fatal Racing was made by Gremlin Interactive.</p>
+
+    <p><a class="button" href="https://ko-fi.com/renacidamods">Tip on Ko-fi</a></p>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>RenacidaMods by Ed Parker. <a href="https://github.com/RenacidaMods">GitHub</a> · <a href="https://ko-fi.com/renacidamods">Ko-fi</a></p>
+    <p>Not affiliated with the original developers or publishers of these games (such as EA, Bullfrog and Gremlin). All game names and content belong to their owners.</p>
+  </div>
+</footer>
+</body>
+</html>
