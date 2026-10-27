@@ -28,7 +28,7 @@
       "name": "Magic Carpet 2 on a modern PC: 4K, smooth frame rates and fixes",
       "inLanguage": "en-GB",
       "datePublished": "2026-10-26",
-      "dateModified": "2026-10-26",
+      "dateModified": "2026-10-27",
       "isPartOf": { "@id": "https://renacidamods.edparker.uk/#website" },
       "author": { "@id": "https://renacidamods.edparker.uk/#ed" },
       "about": {
@@ -42,8 +42,8 @@
     {
       "@type": "SoftwareApplication",
       "name": "RenacidaMods edition of Magic Carpet 2 HD",
-      "softwareVersion": "0.2",
-      "datePublished": "2026-10-26",
+      "softwareVersion": "0.3",
+      "datePublished": "2026-10-27",
       "applicationCategory": "GameApplication",
       "operatingSystem": "Windows",
       "fileSize": "2.7 MB",
@@ -60,10 +60,13 @@
       "featureList": [
         "In-between frames up to 120 fps while the game keeps its original 24 steps a second",
         "Smooth creatures and spells",
-        "Sprites at their intended shape (about 20% too wide before)",
+        "Smooth camera: turning, looking and banking follow a smooth curve between game steps",
+        "Sprites and spells at their intended shape (most sprites about 20% too wide before)",
         "Direct3D 11 display, up to about double the frame rate at 4K",
         "Draws at the screen's resolution by default and picks its own number of render threads",
         "Creature marks 3 times bigger on the large map and 2 times on the minimap",
+        "Computer wizards' possession spell fixed (two quirks from the original 1995 AI)",
+        "F12 asks before quitting",
         "A crash fix, and no mouse grab when the window isn't active"
       ]
     },
@@ -127,7 +130,7 @@
 
 <main>
   <div class="wrap">
-    <p class="muted small">Bullfrog Productions, 1995 · Updated 26 October 2026</p>
+    <p class="muted small">Bullfrog Productions, 1995 · Updated 27 October 2026</p>
     <h1>Magic Carpet 2 on a modern PC: 4K, smooth frame rates and fixes</h1>
 
     <div class="answer">
@@ -157,12 +160,16 @@
     <ul>
       <li><strong>Smooth frames:</strong> the game still runs its normal 24 steps a second, with extra frames drawn in between, up to 120 a second.</li>
       <li><strong>Smooth creatures and spells:</strong> fireballs and creatures glide between steps too.</li>
+      <li><strong>Smooth camera:</strong> turning, looking up and down and banking follow a smooth curve between the game's steps, instead of jolting 24 times a second. Measured 16 to 35% smoother at 4K. New in 0.3.</li>
+      <li><strong>No more jumpy view at 4K:</strong> the original game turns the view in fixed steps that were about a pixel on old screens, but 6 to 15 pixels at 4K. The view now moves smoothly between them. New in 0.3.</li>
       <li><strong>Snappier steering:</strong> the view follows your carpet a whole game step sooner.</li>
       <li><strong>Round sprites:</strong> mana balls, creatures and trees at their intended shape. They were about 20% too wide, because the art was drawn for DOS's tall pixels.</li>
+      <li><strong>Spells at their true shape:</strong> most spells, such as fireball, lightning and meteor, were drawn square rather than wide, so they're now left as drawn instead of being narrowed (in 0.2 they came out too tall). New in 0.3.</li>
+      <li><strong>Computer wizards cast possession properly:</strong> their spell now lands on the mana ball they aim at, and hurt wizards no longer fire it at nothing on their way home. Both quirks are in the original 1995 game, and the <code>fixAiPossess</code> setting turns the fix off. New in 0.3.</li>
       <li><strong>Faster display on Windows:</strong> Direct3D 11 instead of Direct3D 9.</li>
       <li><strong>Sets itself up:</strong> draws at your screen's resolution (4K on a 4K screen) and picks how many processor cores to draw with (one fewer than you have, up to 6). New in 0.2.</li>
       <li><strong>Creatures easy to spot on the maps:</strong> their marks are 3 times bigger on the large map and 2 times on the minimap. On a 4K screen they were only 2 to 4 pixels across. New in 0.2.</li>
-      <li>A <strong>crash fix</strong> for help labels at high resolutions, and the game <strong>no longer grabs your mouse</strong> when its window isn't active. The window's close button quits straight away; Alt+F4 is left to the game, where it's a cheat key.</li>
+      <li>A <strong>crash fix</strong> for help labels at high resolutions, and the game <strong>no longer grabs your mouse</strong> when its window isn't active. <strong>F12 asks before quitting</strong> (Enter quits, Esc keeps playing), and the window's close button quits straight away. Alt+F4 is left to the game, where it's a cheat key.</li>
       <li><strong><code>--load_save latest</code></strong> starts straight back into your newest in-level save.</li>
     </ul>
 
@@ -184,14 +191,17 @@
     <h2>How to install</h2>
     <ol>
       <li>Install <a href="https://github.com/thobbsinteractive/magic-carpet-2-hd">Magic Carpet 2 HD</a> 0.9.16.0 as its own guide describes, and check it runs.</li>
-      <li>Back up your <code>config.json</code>, then copy everything from <strong>RenacidaMods-MC2HD-0.2.zip</strong> into your Magic Carpet 2 HD folder, replacing the files already there.</li>
+      <li>Back up your <code>config.json</code>, then copy everything from <strong>RenacidaMods-MC2HD-0.3.zip</strong> into your Magic Carpet 2 HD folder, replacing the files already there.</li>
       <li>Start <code>remc2.exe</code>. It draws at your screen's resolution. If it isn't smooth, set a lower one in <code>config.json</code> (<code>gameResWidth</code> and <code>gameResHeight</code>).</li>
     </ol>
-    <p>Updating from 0.1? Do the same, then copy any settings you'd changed into the new <code>config.json</code>. To undo it, put back the files from the Magic Carpet 2 HD download and your saved <code>config.json</code>.</p>
+    <p>Updating from 0.1 or 0.2? Do the same, then copy any settings you'd changed into the new <code>config.json</code>. To undo it, put back the files from the Magic Carpet 2 HD download and your saved <code>config.json</code>.</p>
 
     <h2>What PC do you need?</h2>
     <p>The <strong>processor matters most</strong>, because Magic Carpet 2 HD draws its 3D world on the CPU. Any graphics card that supports Direct3D 11 should cope. If it isn't smooth, lower the resolution or the <code>renderFps</code> setting.</p>
     <p class="muted">So far it's only been tested on the PC above. Reports from other PCs are very welcome on <a href="https://github.com/RenacidaMods/magic-carpet-2-hd/issues">GitHub</a>.</p>
+
+    <h2>Found a bug?</h2>
+    <p>Please let me know: <a href="https://github.com/RenacidaMods/magic-carpet-2-hd/issues">open an issue on GitHub</a> saying what happened and on which level. Your PC and a screenshot help too. Reports that it runs well on your PC are just as welcome.</p>
 
     <h2>Questions</h2>
     <details>
@@ -226,8 +236,8 @@
     <h2>Coming next</h2>
     <p class="muted">Plans, not promises.</p>
     <ul>
-      <li>Even snappier steering, using the live mouse position for the in-between frames.</li>
-      <li>Campaign progress kept after a <code>--load_save</code> start.</li>
+      <li>Campaign progress kept after a <code>--load_save</code> start, so the map screen remembers how far you've got.</li>
+      <li>More fixes and improvements.</li>
     </ul>
 
     <h2>Credits</h2>
