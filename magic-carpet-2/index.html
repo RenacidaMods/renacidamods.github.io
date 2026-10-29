@@ -28,7 +28,7 @@
       "name": "Magic Carpet 2 on a modern PC: 4K, smooth frame rates and fixes",
       "inLanguage": "en-GB",
       "datePublished": "2026-10-26",
-      "dateModified": "2026-10-28",
+      "dateModified": "2026-10-29",
       "isPartOf": { "@id": "https://renacidamods.edparker.uk/#website" },
       "author": { "@id": "https://renacidamods.edparker.uk/#ed" },
       "about": {
@@ -42,8 +42,8 @@
     {
       "@type": "SoftwareApplication",
       "name": "RenacidaMods edition of Magic Carpet 2 HD",
-      "softwareVersion": "0.4",
-      "datePublished": "2026-10-28",
+      "softwareVersion": "0.5",
+      "datePublished": "2026-10-29",
       "applicationCategory": "GameApplication",
       "operatingSystem": "Windows",
       "fileSize": "2.7 MB",
@@ -62,6 +62,7 @@
         "Smooth creatures and spells",
         "Smooth camera: turning, looking and banking follow a smooth curve between game steps",
         "Sprites and spells at their intended shape (most sprites about 20% too wide before)",
+        "About a quarter faster on busy levels in 0.5: drawing starts while the scene is laid out, cave backgrounds filled on all cores, up to 7 drawing cores on processors with more than 8 cores",
         "About twice as fast at 4K in 0.4: frames coloured on all cores, off-screen reflections and cave ceilings skipped, creatures and spells drawn on all cores",
         "Direct3D 11 display, up to about double the frame rate at 4K",
         "Draws at the screen's resolution by default and picks its own number of render threads",
@@ -102,7 +103,7 @@
         {
           "@type": "Question",
           "name": "What PC do I need for Magic Carpet 2 HD at 4K?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The processor matters most, because Magic Carpet 2 HD draws its 3D world on the CPU. Any graphics card that supports Direct3D 11 should cope. On a Ryzen 9 5950X it runs at 75 to 120 fps at 4K with the RenacidaMods add-on (about 130 on a busy level and over 200 in caves with the 120 cap lifted)." }
+          "acceptedAnswer": { "@type": "Answer", "text": "The processor matters most, because Magic Carpet 2 HD draws its 3D world on the CPU. Any graphics card that supports Direct3D 11 should cope. On a Ryzen 9 5950X it runs at 75 to 120 fps at 4K with the RenacidaMods add-on (about 155 on a busy level and over 220 in caves with the 120 cap lifted)." }
         },
         {
           "@type": "Question",
@@ -152,11 +153,14 @@
           <tr><td>Magic Carpet 2 HD with maxGameFps raised</td><td>Higher</td><td>Higher</td><td>Too fast: the whole game speeds up</td></tr>
           <tr><td>RenacidaMods edition 0.1</td><td>60 to 95 fps</td><td>120 fps</td><td>Normal</td></tr>
           <tr><td>RenacidaMods edition 0.2 as shipped (automatic settings, 6 render threads)</td><td>About 70 fps</td><td>–</td><td>Normal</td></tr>
-          <tr><td><strong>RenacidaMods edition 0.4</strong>, default 120 cap</td><td><strong>75 to 120 fps</strong></td><td>–</td><td>Normal</td></tr>
+          <tr><td>RenacidaMods edition 0.4, default 120 cap</td><td>75 to 120 fps</td><td>–</td><td>Normal</td></tr>
           <tr><td>RenacidaMods edition 0.4, 120 cap lifted</td><td>About 130 fps on a busy lake level, over 200 in caves</td><td>–</td><td>Normal</td></tr>
+          <tr><td><strong>RenacidaMods edition 0.5</strong>, default 120 cap</td><td><strong>Holds 120 fps most of the time</strong></td><td>–</td><td>Normal</td></tr>
+          <tr><td>RenacidaMods edition 0.5, 120 cap lifted</td><td>About 155 fps on a busy lake level (slowest second about 135), about 225 in caves</td><td>–</td><td>Normal</td></tr>
         </tbody>
       </table>
     </div>
+    <p>0.5 is about a quarter faster again on busy levels: in the same test flight over the lake, the slowest second went from about 105 fps to about 135, so it now stays above the 120 cap. The picture is exactly the same as 0.4.</p>
     <p>0.4 is about twice as fast at 4K as 0.3: on the same busy lake level it went from about 45 to 65 fps to about 130. The picture is exactly the same as before: every pixel was compared, frame by frame.</p>
     <p>The display mode alone makes a big difference at 4K: Direct3D 11 shows a frame in about 5.5 ms, against about 11 ms for the Direct3D 9 mode used by default (roughly 48 fps going up to 90 fps in the same scene).</p>
 
@@ -164,6 +168,7 @@
     <ul>
       <li><strong>Smooth frames:</strong> the game still runs its normal 24 steps a second, with extra frames drawn in between, up to 120 a second.</li>
       <li><strong>Smooth creatures and spells:</strong> fireballs and creatures glide between steps too.</li>
+      <li><strong>About a quarter faster on busy levels:</strong> before, one core worked out the whole scene while the others waited, then they all drew it. Now they start drawing straight away, cave backgrounds are filled on all cores, and processors with more than 8 cores draw with up to 7 of them (was 6). New in 0.5.</li>
       <li><strong>About twice as fast at 4K:</strong> each frame is turned into full colour on all your processor cores, water reflections and cave ceilings that are completely off screen are skipped (the original queued tens of thousands of invisible triangles every frame), and creatures and spells are drawn on all cores. New in 0.4.</li>
       <li><strong>Smooth camera:</strong> turning, looking up and down and banking follow a smooth curve between the game's steps, instead of jolting 24 times a second. Measured 16 to 35% smoother at 4K. New in 0.3.</li>
       <li><strong>No more jumpy view at 4K:</strong> the original game turns the view in fixed steps that were about a pixel on old screens, but 6 to 15 pixels at 4K. The view now moves smoothly between them. New in 0.3.</li>
@@ -172,7 +177,7 @@
       <li><strong>Spells at their true shape:</strong> most spells, such as fireball, lightning and meteor, were drawn square rather than wide, so they're now left as drawn instead of being narrowed (in 0.2 they came out too tall). New in 0.3.</li>
       <li><strong>Computer wizards cast possession properly:</strong> their spell now lands on the mana ball they aim at, and hurt wizards no longer fire it at nothing on their way home. Both quirks are in the original 1995 game, and the <code>fixAiPossess</code> setting turns the fix off. New in 0.3.</li>
       <li><strong>Faster display on Windows:</strong> Direct3D 11 instead of Direct3D 9.</li>
-      <li><strong>Sets itself up:</strong> draws at your screen's resolution (4K on a 4K screen) and picks how many processor cores to draw with (one fewer than you have, up to 6). New in 0.2.</li>
+      <li><strong>Sets itself up:</strong> draws at your screen's resolution (4K on a 4K screen) and picks how many processor cores to draw with (one fewer than you have, up to 6, or up to 7 on processors with more than 8 cores since 0.5). New in 0.2.</li>
       <li><strong>Creatures easy to spot on the maps:</strong> their marks are 3 times bigger on the large map and 2 times on the minimap. On a 4K screen they were only 2 to 4 pixels across. New in 0.2.</li>
       <li>A <strong>crash fix</strong> for help labels at high resolutions, and the game <strong>no longer grabs your mouse</strong> when its window isn't active. <strong>F12 asks before quitting</strong> (Enter quits, Esc keeps playing), and the window's close button quits straight away. Alt+F4 is left to the game, where it's a cheat key.</li>
       <li><strong><code>--load_save latest</code></strong> starts straight back into your newest in-level save.</li>
@@ -196,7 +201,7 @@
     <h2>How to install</h2>
     <ol>
       <li>Install <a href="https://github.com/thobbsinteractive/magic-carpet-2-hd">Magic Carpet 2 HD</a> 0.9.16.0 as its own guide describes, and check it runs.</li>
-      <li>Back up your <code>config.json</code>, then copy everything from <strong>RenacidaMods-MC2HD-0.4.zip</strong> into your Magic Carpet 2 HD folder, replacing the files already there.</li>
+      <li>Back up your <code>config.json</code>, then copy everything from <strong>RenacidaMods-MC2HD-0.5.zip</strong> into your Magic Carpet 2 HD folder, replacing the files already there.</li>
       <li>Start <code>remc2.exe</code>. It draws at your screen's resolution. If it isn't smooth, set a lower one in <code>config.json</code> (<code>gameResWidth</code> and <code>gameResHeight</code>).</li>
     </ol>
     <p>Updating from an earlier version? Do the same, then copy any settings you'd changed into the new <code>config.json</code>. To undo it, put back the files from the Magic Carpet 2 HD download and your saved <code>config.json</code>.</p>
