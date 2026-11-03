@@ -30,5 +30,6 @@ All figures were measured by RenacidaMods on one PC: NVIDIA RTX 3090, AMD Ryzen 
 
 ## Links
 
+- Made by Ed Parker, Exeter. More about Ed: https://edparker.uk/
 - GitHub: https://github.com/RenacidaMods
 - Support (Ko-fi): https://ko-fi.com/renacidamods
